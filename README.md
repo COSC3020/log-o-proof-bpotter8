@@ -13,28 +13,31 @@ might help with the notation for mathematical expressions.
 
 $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$
 
-# Answer:
+# Revised Answer:
 
-First inequality:
+If we cannot assume a particular T(n), then we must prove that 
 
-$c_1 \cdot log_{2} n \leq log_{5} n$
+$O(log_{2} n) \subseteq O(log_{5} n)$ and $O(log_{5} n) \subseteq O(log_{2} n)$
 
-$log_{5} n = log_{2} n / log_{2} 5$ 
+$log_{2} n$ = $\frac {log_{5} n} {log_{5} 2}$
 
-$c_1 = 1 / log_{2} 5$
+c = $\frac {1} {log_{5} 2}$
 
-$1 / log_{2} 5 \cdot log_{2} n \leq log_{5} n$
+$log_{2} n \leq c \cdot log_{5} n$
 
-$log_{2} n / log_{2} 5 \leq log_{5} n$
+$\frac {log_{5} n} {log_{5} 2} \leq \frac {1} {log_{5} 2} \cdot log_{5} n$ (They are equal)
 
-Second inequality:
+So, $O(log_{2} n) \subseteq O(log_{5} n)$
 
-$log_{5} n \leq c_2 \cdot log_{2} n$
+$log_{5} n$ = $\frac {log_{2} n} {log_{2} 5}$
 
-$log_{5} n = log_{2} n / log_{2} 5$ 
+c = $log_{2} 5$
 
-$c_2 = log_{2} 5$
+$log_{5} n \leq c \cdot log_{2} n$
 
-$log_{5} n \leq log_{2} 5 \cdot log_{2} n$
+$\frac {log_{2} n} {log_{2} 5} \leq log_{2} 5 \cdot log_{2} n$ (This is always true)
 
-The constants check out for both inequalities.
+So, $O(log_{5} n) \subseteq O(log_{2} n)$
+
+Because $O(log_{2} n) \subseteq O(log_{5} n)$ and $O(log_{5} n) \subseteq O(log_{2} n)$, 
+then it must be true that $O(log_{2} n)$ is the same as $O(log_{5} n)$.
