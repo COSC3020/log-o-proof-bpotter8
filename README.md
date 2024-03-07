@@ -25,6 +25,10 @@ $log_{5} n$ = $\frac {log_{2} n} {log_{2} 5} $
 
 T(n) $\leq c \cdot \frac {log_{2} n} {log_{2} 5}$
 
+T(n) $\leq \frac {c \cdot log_{2} n} {log_{2} 5}$
+
+$log_{2} 5$ is combined with c because they are both constants
+
 T(n) $\leq c \cdot log_{2} n$
 
 If T(n) $\leq c \cdot log_{2} n$ is true, then
