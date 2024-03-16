@@ -15,26 +15,31 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 
 # Answer:
 
-First inequality:
+If we cannot assume a particular T(n) or c, then we must prove that
 
-$c_1 \cdot log_{2} n \leq log_{5} n$
+$O(log_{2} n) \subseteq O(log_{5} n)$ and $O(log_{5} n) \subseteq O(log_{2} n)$
 
-$log_{5} n = log_{2} n / log_{2} 5$ 
+T(n) $\leq c \cdot log_{5} n$ for $n \geq n_0$
 
-$c_1 = 1 / log_{2} 5$
+$log_{5} n$ = $\frac {log_{2} n} {log_{2} 5} $
 
-$1 / log_{2} 5 \cdot log_{2} n \leq log_{5} n$
+T(n) $\leq c \cdot \frac {log_{2} n} {log_{2} 5}$ for $n \geq n_0$
 
-$log_{2} n / log_{2} 5 \leq log_{5} n$
+T(n) $\leq c (\frac {1} {log_{2} 5}) \cdot log_{2} n$ for $n \geq n_0$
 
-Second inequality:
+This proves that T(n) is bounded by big-O $(log_{2} n)$ with the constant $c (\frac {1} {log_{2} 5})$.
 
-$log_{5} n \leq c_2 \cdot log_{2} n$
+Next,
 
-$log_{5} n = log_{2} n / log_{2} 5$ 
+T(n) $\leq c \cdot log_{2} n$ for $n \geq n_0$
 
-$c_2 = log_{2} 5$
+$log_{2} n$ = $\frac {log_{5} n} {log_{5} 2} $
 
-$log_{5} n \leq log_{2} 5 \cdot log_{2} n$
+T(n) $\leq c \cdot \frac {log_{5} n} {log_{5} 2}$ for $n \geq n_0$
 
-The constants check out for both inequalities.
+T(n) $\leq c (\frac {1} {log_{5} 2}) \cdot log_{5} n$ for $n \geq n_0$
+
+This proves that T(n) is bounded by big-O $(log_{5} n)$ with the constant $c (\frac {1} {log_{5} 2})$.
+
+Because $O(log_{2} n) \subseteq O(log_{5} n)$ and $O(log_{5} n) \subseteq O(log_{2} n)$, 
+then it must be true that $O(log_{2} n)$ is the same as $O(log_{5} n)$.
