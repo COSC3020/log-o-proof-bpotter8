@@ -27,6 +27,8 @@ T(n) $\leq c \cdot \frac {log_{2} n} {log_{2} 5}$ for $n \geq n_0$
 
 T(n) $\leq c (\frac {1} {log_{2} 5}) \cdot log_{2} n$ for $n \geq n_0$
 
+This proves that T(n) is bounded by big-O $(log_{2} n)$ with the constant $c (\frac {1} {log_{2} 5})$.
+
 Next,
 
 T(n) $\leq c \cdot log_{2} n$ for $n \geq n_0$
@@ -36,6 +38,8 @@ $log_{2} n$ = $\frac {log_{5} n} {log_{5} 2} $
 T(n) $\leq c \cdot \frac {log_{5} n} {log_{5} 2}$ for $n \geq n_0$
 
 T(n) $\leq c (\frac {1} {log_{5} 2}) \cdot log_{5} n$ for $n \geq n_0$
+
+This proves that T(n) is bounded by big-O $(log_{5} n)$ with the constant $c (\frac {1} {log_{5} 2})$.
 
 Because $O(log_{2} n) \subseteq O(log_{5} n)$ and $O(log_{5} n) \subseteq O(log_{2} n)$, 
 then it must be true that $O(log_{2} n)$ is the same as $O(log_{5} n)$.
